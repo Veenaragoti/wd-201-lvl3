@@ -8,32 +8,32 @@ const todoList = () => {
   };
 
   const overdue = () => {
-    let dateToday = new Date();
-    const today = formattedDate(dateToday);
+    let date = new Date();
+    const today = formattedDate(date);
     return all.filter((todo) => {
       return todo.dueDate < today;
     });
   };
 
   const dueToday = () => {
-    let dateToday = new Date();
-    const today = formattedDate(dateToday);
+    let date = new Date();
+    const today = formattedDate(date);
     return all.filter((todo) => {
       return todo.dueDate === today;
     });
   };
 
   const dueLater = () => {
-    let dateToday = new Date();
-    const today = formattedDate(dateToday);
+    let date = new Date();
+    const today = formattedDate(date);
     return all.filter((todo) => {
       return todo.dueDate > today;
     });
   };
 
   const toDisplayableList = (list) => {
-    let dateToday = new Date();
-    const today = formattedDate(dateToday);
+    let date = new Date();
+    const today = formattedDate(date);
     return list
       .map((todo) => {
         return `[${todo.completed ? "x" : " "}] ${todo.title} ${
